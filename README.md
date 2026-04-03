@@ -1,4 +1,4 @@
-# 🤖 Wally Educativo — Sistema Interactivo de Aprendizaje
+# 🤖 Wally — Sistema Interactivo de Aprendizaje
 
 <div align="center">
 
@@ -15,9 +15,9 @@
 
 ---
 
-## 📖 ¿Qué es Wall-E Educativo?
+## 📖 ¿Qué es Wally?
 
-Wall-E Educativo es un sistema híbrido de **hardware y software** diseñado para acercar la tecnología al espacio educativo infantil de una forma lúdica y memorable.
+Wally Educativo es un sistema híbrido de **hardware y software** diseñado para acercar la tecnología al espacio educativo infantil de una forma lúdica y memorable.
 
 El sistema consiste en una **réplica física impresa en 3D de Wall-E** (el icónico personaje de la película) equipada con sensores y módulos electrónicos. Los niños interactúan con Wall-E acercando **tarjetas NFC** con diferentes diseños para responder preguntas que se presentan en un **portal web** alojado directamente en el dispositivo.
 
@@ -77,19 +77,14 @@ El sistema consiste en una **réplica física impresa en 3D de Wall-E** (el icó
 ### Arquitectura
 
 ```
-esp32/
-├── firmware/
-│   └── walle.ino          # Código principal C++ (AP + NFC + audio)
-└── web/
-    ├── index.html          # Portal de inicio
-    ├── style.css           # Estilos del portal
-    └── games/
-        ├── vocales.html
-        ├── numeros.html
-        ├── frutas.html
-        ├── libre.html
-        ├── colores.html
-        └── figuras.html
+main/
+  └── main.ino          # Código principal C++ (AP + NFC + audio)
+  └── data/
+    ├── index.html          
+    ├── style.css
+    ├── app.js           
+    └── img/
+         └──{img}.webp
 ```
 
 ---
