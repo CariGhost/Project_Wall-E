@@ -1,0 +1,419 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #FF6B6B 0%, #FFD93D 30%, #6BCB77 60%, #4D96FF 100%);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}   
+
+
+/* HEADER */
+header{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+header h1{
+    font-size:60px;
+    font-weight:800;
+}
+
+header p{
+    font-size:24px;
+    margin-top:10px;
+}
+
+/* GRID */
+.container{
+    width:100%;
+    max-width:1000px;
+    margin: 0 auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:40px;
+}
+
+
+/* TARJETAS */
+.game{
+    background:#A7D4E5;
+    border-radius:25px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.game:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 25px rgba(0,0,0,.2);
+}
+
+.card-top{
+    height:160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#BDE0F2;
+    overflow: hidden;
+}
+
+.card-top img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-bottom{
+    padding:20px;
+    text-align:center;
+    font-weight:600;
+    font-size:18px;
+}
+
+/* COLORES */
+.red{ background:#C61F49; }
+.pink{ background:#D97BA6; }
+.blue{ background:#86C1CF; }
+
+/* IMÁGENES */
+.side-image{
+    position:fixed;
+    width:150px;
+}
+
+.left{
+    left:10px;
+    bottom:20px;
+}
+
+.right{
+    right:20px;
+    top:20px;
+}
+
+
+
+
+/* INFO */
+
+/* INFO */
+
+#info{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    background:#7fb8be;
+    padding:60px;
+    border-radius:35px;
+    max-width:1000px;
+    width:90%;
+    box-shadow:0 25px 50px rgba(0,0,0,.15);
+}
+
+/* Imagen */
+#imagenJuego{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* Columna derecha */
+.contenido{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:20px;
+    flex:1;
+}
+
+/* Título */
+#tituloJuego{
+    font-size:42px;
+    font-weight:800;
+}
+
+/* Descripción */
+#descJuego{
+    font-size:20px;
+    line-height:1.6;
+    max-width:500px;
+}
+
+/* Botones */
+.botones{
+    display:flex;
+    justify-content:flex-end;
+    gap:25px;
+    margin-top:20px;
+}
+
+/* Estilo general botón */
+.botones button{
+    padding:14px 40px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+/* Botón Volver */
+.botones button:last-child{
+    background:#8e9a8b;
+    color:#111;
+}
+
+/* Botón Iniciar */
+.botones button:first-child{
+    background:#7BC043;
+    font-weight:700;
+}
+
+/* Hover */
+.botones button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+
+/* JUEGOS */
+
+
+/* COLORES */
+.inGameTitle{
+    position: fixed;
+    top:20px;
+    left: 80%;
+    font-size: larger;
+    
+}
+
+.back{
+    position:absolute;
+    top:20px;
+    left:20px;
+    background:#8e9a8b;
+    color:#111;
+    padding:10px 20px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s ease;
+    font-size: 20px;
+}
+
+#color1{
+    width: 150px;
+    height: 150px;
+    background-color: red; 
+    border-radius: 50%;
+}
+
+#color2{
+    width: 150px;
+    height: 150px;
+    background-color: blue; 
+    border-radius: 50%;
+}
+
+.colorsign{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.operacion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+#colorResult{
+    padding: 80px;
+    font-size: 100px;
+}
+
+
+
+/* RATO LIBRE */
+
+.freetimeGame {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.cruceta {
+    display: grid;
+    grid-template-columns: 130px 130px 130px;
+    grid-template-rows: 130px 130px 130px;
+    gap: 8px;
+}
+
+.cruz-btn {
+    background: #7DD8E0;
+    border: none;
+    border-radius: 22px;
+    font-size: 50px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cruz-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.cruz-btn:active {
+    transform: scale(0.95);
+}
+
+/* Posición en el grid */
+.cruz-btn.up    { grid-column: 2; grid-row: 1; }
+.cruz-btn.left  { grid-column: 1; grid-row: 2; }
+.cruz-btn.sound { grid-column: 2; grid-row: 2; }
+.cruz-btn.right { grid-column: 3; grid-row: 2; }
+.cruz-btn.down  { grid-column: 2; grid-row: 3; }
+
+/* Las esquinas del grid quedan vacías (invisibles) */
+
+
+/* JUEGO DE NÚMEROS */
+.numberGame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #FFD93D;
+}
+
+.number-operacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.number-operacion h1 {
+    font-size: 160px;
+    font-weight: 900;
+    color: #111;
+    line-height: 1;
+}
+
+.num-sign {
+    font-size: 120px;
+    font-weight: 900;
+    color: #000000;
+    line-height: 1;
+}
+
+.num-igual {
+    font-size: 120px;
+    font-weight: 900;
+    color: #000000;
+    line-height: 1;
+}
+
+.num-question {
+    font-size: 160px;
+    font-weight: 900;
+    color: #111;
+    line-height: 1;
+}
+
+
+#vocalGame {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vocal-pregunta {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 120px;
+    font-weight: 900;
+    color: #111;
+}
+
+.vocal-letra {
+    position: absolute;
+    font-size: 160px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    user-select: none;
+}
+
+.vocal-letra:hover {
+    transform: scale(1.15);
+}
+
+/* JUEGO DE FIGURAS */
+.figureGame {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.figure-operacion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.figura-img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.figure-igual {
+    font-size: 100px;
+    font-weight: 900;
+    color: #000000;
+    line-height: 1;
+}
+
+.figure-question {
+    font-size: 180px;
+    font-weight: 900;
+    color: #111;
+    line-height: 1;
+}

@@ -1,0 +1,165 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Wall-E</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            
+            <!-- HOME -->
+
+            <div id="home">
+
+            <img src="img/walle saludando.webp" class="side-image right" alt="Walle deracha">
+            <img src="img/walle1.webp" class="side-image left" alt="Walle izquierda">
+
+            <header>
+                <h1>¡Hola, Bienvenido!</h1>
+                <p>Selecciona una Experiencia para continuar</p>
+            </header>
+
+            <div class="container">
+
+                <div class="game blue" data-game="vocales">
+                    <div class="card-top">
+                        <img src="img/juegovocales.webp" alt="Vocales">
+                    </div>
+                    <div class="card-bottom">Juego de Vocales</div>
+                </div>
+
+                
+
+                <div class="game pink" data-game="colores">
+                    <div class="card-top">
+                        <img src="img/colores.webp" alt="colores">
+                    </div>
+                    <div class="card-bottom">Juego de Colores</div>
+                </div>
+
+            
+
+                <div class="game red" data-game="frutas">
+                    <div class="card-top">
+                        <img src="img/frutas.webp" alt="Frutas">
+                    </div>
+                    <div class="card-bottom">Frutas</div>
+                </div>
+
+                <div class="game pink" data-game="figuras">
+                    <div class="card-top">
+                        <img src="img/JuegoFiguras.webp" alt="figuras">
+                    </div>
+                    <div class="card-bottom">Juego de Figuras</div>
+                </div>
+
+                <div class="game blue" data-game="ratolibre">
+                    <div class="card-top">
+                        <img src="img/ratolibre.webp" alt="ratolibre">
+                    </div>
+                    <div class="card-bottom">Rato Libre</div>
+                </div>
+
+                <div class="game pink" data-game="numeros">
+                    <div class="card-top">
+                        <img src="img/numeros.webp" alt="numeros">
+                    </div>
+                    <div class="card-bottom">Juego de Números</div>
+                </div>
+
+            </div>
+            </div>
+
+
+        <!-- SECCION DE INFORMACION DEL JUEGO -->
+
+            <div id="info" style="display: none;" >
+                <img id="imagenJuego" src="" alt="Imagen del juego">
+                <div class="contenido">
+                    <h1 id="tituloJuego"></h1>
+                    <p id="descJuego"></p>
+                    <div class="botones">
+                        <button onclick="initExp()">Iniciar</button>
+                        <button onclick="goHome()">Volver</button>
+                    </div>
+                </div>
+            </div>
+            
+        <!-- SECCION DE JUEGOS -->
+
+            <div id="vocalGame" style="display: none;">
+                <button class="back" onclick="goHome()">Volver</button>
+                <div class="inGameTitle"><h1>Juego de Vocales</h1></div>
+
+                <div class="vocal-pregunta">?</div>
+
+                <div class="vocal-letra" style="top: 45%; left: 18%;">A</div>
+                <div class="vocal-letra" style="top: 30%; left: 28%;">E</div>
+                <div class="vocal-letra" style="top: 40%; left: 58%;">O</div>
+                <div class="vocal-letra" style="top: 50%; left: 72%;">U</div>
+            </div>
+
+            <div id="colorGame" style="display: none;">
+
+                <button class="back" onclick="goHome()">Volver</button>
+                <div class="inGameTitle"><h1>Juego de Colores</h1></div>
+                <div class="operacion">
+                <div id="color1"></div>
+                <div class="colorsign"><h1>+</h1></div>
+                <div id="color2"></div>
+                <div class="colorsign"><h1>=</h1></div>
+                <div id="colorResult" class="colorsign"><h1>?</h1></div>
+                </div>
+            </div>
+
+            <div id="freetimeGame" style="display: none;">
+                <button class="back" onclick="goHome()">Volver</button>
+                <div class="inGameTitle"><h1>Rato Libre</h1></div>
+
+            <div class="cruceta-wrapper">
+                <div class="cruceta">
+                    <button class="cruz-btn up" data-key="up">▲</button>
+                    <button class="cruz-btn left" data-key="left">◀</button>
+                    <button class="cruz-btn sound" data-key="sound">🔊</button>
+                    <button class="cruz-btn right" data-key="right">▶</button>
+                    <button class="cruz-btn down" data-key="down">▼</button>
+                </div>
+            </div>
+            </div>
+
+            <div id="numberGame" style="display: none;">
+                <button class="back" onclick="goHome()">Volver</button>
+                <div class="inGameTitle"><h1>Juego de Números</h1></div>
+
+                <div class="number-operacion">
+                    <h1 id="num1">1</h1>
+                    <span class="num-sign" id="sign">+</span>
+                    <h1 id="num2">2</h1>
+                    <span class="num-igual">=</span>
+                    <span class="num-question">?</span>
+                </div>
+
+                <div class="number-opciones" id="numberOpciones"></div>
+            </div>
+
+            <div id="figureGame" style="display: none;">
+                <button class="back" onclick="goHome()">Volver</button>
+                <div class="inGameTitle"><h1>Juego de Figuras</h1></div>
+
+                <div class="figure-operacion">
+                    <img id="figuraImg" src="img/ventana.webp" alt="Figura" class="figura-img">
+                    <span class="figure-igual">=</span>
+                    <span class="figure-question">?</span>
+                </div>
+            </div>
+
+            <div id="fruitGame" style="display: none;">
+                <button class="back" onclick="goHome()">Volver</button>
+                <div class="inGameTitle"><h1>Juego de Frutas</h1></div>
+            </div>
+
+            <script src="app.js"></script>
+
+        </body>
+        </html>
