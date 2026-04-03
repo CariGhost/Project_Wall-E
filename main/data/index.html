@@ -88,17 +88,22 @@
             
         <!-- SECCION DE JUEGOS -->
 
-            <div id="vocalGame" style="display: none;">
+             <div id="vocalGame" style="display: none;">
                 <button class="back" onclick="goHome()">Volver</button>
                 <div class="inGameTitle"><h1>Juego de Vocales</h1></div>
 
-                <div class="vocal-pregunta">?</div>
+                <div class="vocal-score" id="vocalScore">⭐ 0 correctas</div>
 
-                <div class="vocal-letra" style="top: 45%; left: 18%;">A</div>
-                <div class="vocal-letra" style="top: 30%; left: 28%;">E</div>
-                <div class="vocal-letra" style="top: 40%; left: 58%;">O</div>
-                <div class="vocal-letra" style="top: 50%; left: 72%;">U</div>
+                <div class="vocal-emoji" id="vocalEmoji">🐝</div>
+                <div class="vocal-pregunta" id="vocalPista">_ B E J A</div>
+                <div class="vocal-hint" id="vocalHint">¿Qué vocal falta?</div>
+                <div class="vocal-feedback" id="vocalFeedback"></div>
+
+                <div class="vocal-opciones" id="vocalOpciones"></div>
+
+                <button class="vocal-next" id="vocalNext" onclick="vocalSiguiente()">Siguiente →</button>
             </div>
+
 
             <div id="colorGame" style="display: none;">
 
