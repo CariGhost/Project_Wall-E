@@ -1,4 +1,4 @@
-# 🤖 Wall-E Educativo — Sistema Interactivo de Aprendizaje
+# 🤖 Wally Educativo — Sistema Interactivo de Aprendizaje
 
 <div align="center">
 
@@ -127,16 +127,10 @@ Niños en etapa de educación inicial y primaria (3–8 años), integrando el ap
 
 ---
 
-## 📄 Licencia
-
-Este proyecto está bajo la licencia [MIT](LICENSE).
-
----
-
 <div align="center">
 
 Hecho con ❤️ para llevar tecnología al aula
 
-*"Wall-E found treasure in the classroom." 🌱*
+*"Wally, encuentra el tesoro en el aula" 🌱*
 
 </div>
